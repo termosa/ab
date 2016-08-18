@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "description": "AngularJS boilerplate",
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5"
+  }
 }
