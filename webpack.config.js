@@ -68,18 +68,25 @@ if (IS_PROD) {
   }());
 }
 
-config.devServer({
-  host: process.env.WDS_HOST || 'localhost',
-  port: process.env.WDS_PORT || 8080,
-  contentBase: PUBLIC_DIR,
-  historyApiFallback: true
-});
+config.module.noParse([
+  /\/angular\/angular\.js$/
+]);
 
-// Hot reload
-config.devServer.hot(true);
-plugin(function() {
-  return new webpack.HotModuleReplacementPlugin();
-}());
+{ // Development server configuration
+
+  config.devServer({
+    host: process.env.WDS_HOST || 'localhost',
+    port: process.env.WDS_PORT || 8080,
+    contentBase: PUBLIC_DIR,
+    historyApiFallback: true
+  });
+
+  // Hot reload
+  config.devServer.hot(true);
+  plugin(function() {
+    return new webpack.HotModuleReplacementPlugin();
+  }());
+};
 
 if (process.env.WDS_DASHBOARD) {
   plugin(function() {
