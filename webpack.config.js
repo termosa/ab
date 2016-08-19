@@ -1,5 +1,9 @@
 var path = require('path');
 
+// Environment specification
+var IS_PROD = !~['dev', 'development'].indexOf(process.env.NODE_ENV);
+var IS_DEV = !IS_PROD;
+
 module.exports = {
   context: './src',
   entry: {
@@ -13,5 +17,6 @@ module.exports = {
     alias: {
       module: './modules'
     }
-  }
+  },
+  devtool: IS_DEV ? 'eval' : null
 };
