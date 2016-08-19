@@ -9,6 +9,7 @@
     "webpack-manager": "2.0"
   },
   "devDependencies": {
+    "ng-annotate-loader": "0.1",
     "webpack": "1.13"
   }
 }
