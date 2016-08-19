@@ -1,1 +1,1 @@
-module.exports = require('module/window').document;
+module.exports = require('window').document;

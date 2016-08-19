@@ -3,8 +3,8 @@ var webpack = require('webpack');
 var config = require('webpack-manager')();
 
 var PUBLIC_DIR = __dirname;
-var SOURCE_DIR = path.join(__dirname, '/src');
-var APP_DIR = path.join(__dirname, '/app');
+var SOURCE_DIR = path.resolve('./src');
+var APP_DIR = path.resolve('./app');
 
 // Environment specification
 var IS_PROD = !~['dev', 'development'].indexOf(process.env.NODE_ENV);
@@ -28,8 +28,17 @@ config.output({
 
 config.devtool(IS_DEV ? 'eval' : null);
 
-alias('module', path.join(SOURCE_DIR, '/modules'));
-alias('component', path.join(SOURCE_DIR, '/components'));
+{ // Aliasing app modules
+  config.resolve.root([
+    path.resolve('./src/components'),
+    path.resolve('./src/modules')
+  ]);
+
+  alias({
+    component: path.join(SOURCE_DIR, '/components'),
+    module: path.join(SOURCE_DIR, '/modules')
+  });
+};
 
 // It's required only for obfuscated code. But it's included to
 // development build for greater reliability
@@ -73,7 +82,6 @@ config.module.noParse([
 ]);
 
 { // Development server configuration
-
   config.devServer({
     host: process.env.WDS_HOST || 'localhost',
     port: process.env.WDS_PORT || 8080,
