@@ -1,2 +1,6 @@
+# Vendors files
 node_modules/
+
+# Generated files
+app/
 
