@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 // Environment specification
 var IS_PROD = !~['dev', 'development'].indexOf(process.env.NODE_ENV);
@@ -18,5 +19,11 @@ module.exports = {
       module: './modules'
     }
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      IS_DEV: JSON.stringify(IS_DEV),
+      IS_PROD: JSON.stringify(IS_PROD)
+    })
+  ],
   devtool: IS_DEV ? 'eval' : null
 };
