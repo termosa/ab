@@ -4,12 +4,12 @@
   "description": "AngularJS boilerplate",
   "scripts": {
     "postinstall": "npm run build:prod",
-
     "build": "npm run build:prod",
     "build:prod": "webpack",
     "build:dev": "NODE_ENV=dev webpack",
-
-    "start": "NODE_ENV=dev webpack-dev-server --inline --hot"
+    "start": "npm run start:dev",
+    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline",
+    "start:dev": "WDS_DASHBOARD=1 NODE_ENV=dev webpack-dashboard -- webpack-dev-server --inline --hot"
   },
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com>",
   "license": "ISC",
@@ -19,7 +19,8 @@
   "devDependencies": {
     "ng-annotate-loader": "0.1",
     "webpack": "1.13",
-    "webpack-manager": "2.0",
-    "webpack-dev-server": "1.14"
+    "webpack-dashboard": "0.1",
+    "webpack-dev-server": "1.14",
+    "webpack-manager": "2.0"
   }
 }

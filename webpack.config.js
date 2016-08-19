@@ -81,4 +81,11 @@ plugin(function() {
   return new webpack.HotModuleReplacementPlugin();
 }());
 
+if (process.env.WDS_DASHBOARD) {
+  plugin(function() {
+    var DashboardPlugin = require('webpack-dashboard/plugin');
+    return new DashboardPlugin();
+  }());
+}
+
 module.exports = config.setup();
