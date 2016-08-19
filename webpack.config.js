@@ -78,7 +78,8 @@ if (IS_PROD) {
 }
 
 config.module.noParse([
-  path.resolve('./node_modules/angular/angular.js')
+  path.resolve('./node_modules/angular/angular.js'),
+  path.resolve('./node_modules/angular-route/angular-route.js')
 ]);
 
 { // Development server configuration

@@ -3,5 +3,5 @@ var appModule = require('app');
 var document = require('document');
 
 angular.element(document).ready(function() {
-  angular.bootstrap(document, [appModule.id]);
+  angular.bootstrap(document, [appModule]);
 });

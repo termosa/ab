@@ -18,6 +18,6 @@ Thanks for taking a time to contribute!
 
 Each Angular component should follow rules listed below
 
- * Angular `module` should return an object with it's **id** (name) and **instance** of the module
- * All kind of Angular `services`, `components`, `directives`, `controllers` and `filters` should return an object with it's, **id** (name) and **module** definition as described above
+ * Angular `module` should return a string containing an **id** (name) of the module
+ * All kind of Angular `services`, `components`, `directives`, `controllers` and `filters` should return an object with its **id** (name) and the containing **module** id
 
