@@ -1,5 +1,5 @@
 var angular = require('angular');
-var appModule = require('./modules/app');
+var appModule = require('module/app');
 
 angular.element(document).ready(function() {
   angular.bootstrap(document, [appModule.id]);
