@@ -40,9 +40,16 @@ config.devtool(IS_DEV ? 'eval' : null);
   });
 };
 
-// It's required only for obfuscated code. But it's included to
-// development build for greater reliability
-loader({ test: /\/components\/.*\.js$/, loaders: ['ng-annotate'] });
+{ // Solving Angular issues
+  loader({
+    test: /\/src\/components\/.*\.html$/,
+    loader: 'ng-cache?exportId&prefix=src:/app/components/**'
+  });
+
+  // It's required only for obfuscated code. But it's included to
+  // development build for greater reliability
+  loader({ test: /\/src\/components\/.*\.js$/, loader: 'ng-annotate' });
+};
 
 plugin(function() {
   return new webpack.DefinePlugin({
