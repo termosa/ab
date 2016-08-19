@@ -69,8 +69,8 @@ if (IS_PROD) {
 }
 
 config.devServer({
-  host: 'localhost',
-  port: 8080,
+  host: process.env.WDS_HOST || 'localhost',
+  port: process.env.WDS_PORT || 8080,
   contentBase: PUBLIC_DIR,
   historyApiFallback: true
 });
