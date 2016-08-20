@@ -1,6 +1,8 @@
 # Vendors files
 node_modules/
+bower_modules/
 
 # Generated files
 app/
+npm-debug.log
 

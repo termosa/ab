@@ -31,12 +31,20 @@ config.devtool(IS_DEV ? 'eval' : null);
 { // Aliasing app modules
   config.resolve.root([
     path.resolve('./src/components'),
-    path.resolve('./src/modules')
+    path.resolve('./src/modules'),
+    path.resolve('./src/vendors'),
+    path.resolve('./src/statics'),
+    path.resolve('./bower_modules'),
+    path.resolve('./node_modules')
   ]);
 
   alias({
     component: path.join(SOURCE_DIR, '/components'),
-    module: path.join(SOURCE_DIR, '/modules')
+    module: path.join(SOURCE_DIR, '/modules'),
+    vendor: path.join(SOURCE_DIR, '/vendors'),
+    static: path.join(SOURCE_DIR, '/statics'),
+    bower: path.resolve('./bower_modules'),
+    node: path.resolve('./node_modules')
   });
 };
 

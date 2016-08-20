@@ -9,8 +9,10 @@ Thanks for taking a time to contribute!
  * **/index.html** — entry file for browsing the application
  * **/app** — destination folder for builded files
  * **/src** — code of the application
- * **/src/components** —  custom Angular components
- * **/src/modules** —  other custom components
+ * **/src/components** — custom Angular components
+ * **/src/modules** — other custom components
+ * **/src/vendors** — files that creates a layer above 3rd party libraries to make them compatible with the application environment
+ * **/src/statics** — libraries that can't be installed via package managers
 
 ## Code specification
 
