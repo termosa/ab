@@ -7,6 +7,7 @@ var processAngularComponents = require('./process-angular-components');
 var setupDevServer = require('./setup-dev-server');
 var skipProcessingVendors = require('./skip-processing-vendors');
 var processHtmlDocuments = require('./process-html-documents');
+var processStyles = require('./process-styles');
 
 var ROOT_DIR = path.resolve('./');
 var PUBLIC_DIR = ROOT_DIR;
@@ -19,5 +20,6 @@ processAngularComponents(config);
 setupDevServer(config, PUBLIC_DIR);
 skipProcessingVendors(config, ROOT_DIR);
 processHtmlDocuments(config);
+processStyles(config);
 
 module.exports = config.setup();

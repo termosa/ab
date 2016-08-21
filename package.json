@@ -19,11 +19,13 @@
   },
   "devDependencies": {
     "bower": "1",
+    "css-loader": "0.23",
     "extract-loader": "0.0",
     "file-loader": "0.9",
     "html-loader": "0.4",
     "ng-annotate-loader": "0.1",
     "ng-cache-loader": "0.0",
+    "style-loader": "0.13",
     "webpack": "1.13",
     "webpack-dashboard": "0.1",
     "webpack-dev-server": "1.14",

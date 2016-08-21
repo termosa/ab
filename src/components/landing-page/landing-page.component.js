@@ -4,7 +4,7 @@ var landingPageModule = require('./landing-page.module');
 var id = 'landingPage';
 angular.module(landingPageModule)
 .component(id, {
-  templateUrl: require('./landing-page.html').id,
+  templateUrl: require('./landing-page.template'),
   controller: function() {
     this.name = 'World';
   }
