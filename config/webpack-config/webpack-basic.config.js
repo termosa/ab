@@ -6,7 +6,7 @@ var aliasingModules = require('./aliasing-modules');
 var processAngularComponents = require('./process-angular-components');
 var setupDevServer = require('./setup-dev-server');
 var skipProcessingVendors = require('./skip-processing-vendors');
-var processHtmlDocument = require('./process-html-documents');
+var processHtmlDocuments = require('./process-html-documents');
 
 var ROOT_DIR = path.resolve('./');
 var PUBLIC_DIR = ROOT_DIR;
@@ -18,6 +18,6 @@ aliasingModules(config, ROOT_DIR);
 processAngularComponents(config);
 setupDevServer(config, PUBLIC_DIR);
 skipProcessingVendors(config, ROOT_DIR);
-processHtmlDocument(config);
+processHtmlDocuments(config);
 
 module.exports = config.setup();

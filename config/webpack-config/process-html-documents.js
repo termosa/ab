@@ -1,4 +1,4 @@
-function processHtmlDocument(config) {
+function processHtmlDocuments(config) {
   config.module.loaders.add({
     test: /\.html$/,
     exclude: /\/src\/components\/.*\.html$/,
@@ -12,4 +12,4 @@ function processHtmlDocument(config) {
   return config;
 }
 
-module.exports = processHtmlDocument;
+module.exports = processHtmlDocuments;
