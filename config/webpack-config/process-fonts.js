@@ -1,7 +1,17 @@
 function processFonts(config) {
   config.module.loaders.add({
     test: /\.(ttf|woff2?|eot)$/,
-    loader: 'file?name=fontfaces/[name]-[hash].[ext]'
+    include: /\/src\//,
+    loader: 'file?name=[path][name].[ext]'
+  })
+  // to avoid ugly path for third party components
+  config.module.loaders.add({
+    test: /\.(ttf|woff2?|eot)$/,
+    include: /\/(node|bower)_modules\//,
+    loader: 'file?' + [
+      'regExp=(node|bower)_modules/(.*)',
+      'name=fontfaces/[2].[ext]'
+    ].join('&')
   })
   return config;
 }

@@ -1,7 +1,4 @@
-@import url('~style/open-sans-fontface');
-
 .landing-page {
-  font: 14px 'Open Sans', sans-serif;
   padding: 30px;
   width: 210px;
   height: 30px;
