@@ -1,4 +1,3 @@
-var HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
 var DashboardPlugin = require('webpack-dashboard/plugin');
 var env = process.env;
 
@@ -14,7 +13,6 @@ function setupDevServer(config, publicDir) {
 
   // Hot reload
   config.devServer.hot(true);
-  addPlugin(new HotModuleReplacementPlugin());
 
   if (env.WDS_DASHBOARD) {
     addPlugin(new DashboardPlugin());
