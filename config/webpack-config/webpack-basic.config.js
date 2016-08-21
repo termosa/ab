@@ -19,7 +19,7 @@ var SOURCE_DIR = path.resolve('./src');
 var DIST_DIR = path.resolve('./dist');
 
 // Basic file extensions
-config.resolve.extensions(['', '.js']);
+config.resolve.extensions([ '', '.js', '.css' ]);
 
 ioConfiguration(config, SOURCE_DIR, DIST_DIR);
 aliasingModules(config, ROOT_DIR);
