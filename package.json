@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "description": "AngularJS boilerplate",
   "scripts": {
-    "postinstall": "npm run build:prod",
     "build": "npm run build:prod",
-    "build:prod": "webpack",
-    "build:dev": "NODE_ENV=dev webpack",
+    "build:dev": "webpack --config ./config/webpack-dev.config.js",
+    "build:prod": "webpack --config ./config/webpack-prod.config.js",
+    "postinstall": "npm run build:prod",
     "start": "npm run start:dev",
-    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline",
-    "start:dev": "WDS_DASHBOARD=1 NODE_ENV=dev webpack-dashboard -- webpack-dev-server --inline --hot"
+    "start:dev": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-dev.config.js",
+    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --config ./config/webpack-prod.config.js"
   },
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com>",
   "license": "ISC",
@@ -24,6 +24,6 @@
     "webpack": "1.13",
     "webpack-dashboard": "0.1",
     "webpack-dev-server": "1.14",
-    "webpack-manager": "2.0"
+    "webpack-manager": "2.1"
   }
 }
