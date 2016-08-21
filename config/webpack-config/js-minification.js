@@ -3,7 +3,7 @@ var UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 var uglifyOptions = {
   compress: {
     unsafe: false,
-    warnings: true,
+    warnings: false,
     passes: 2,
 
     sequences: true,
