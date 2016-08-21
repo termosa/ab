@@ -7,5 +7,6 @@ console.log('Build launched in DEVELOPMENT mode');
 
 setDevEnvironment(config);
 config.devtool('eval');
+config.output.pathinfo(true);
 
 module.exports = config.setup();

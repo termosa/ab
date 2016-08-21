@@ -3,7 +3,7 @@ function ioConfiguration(config, srcDir, distDir) {
   config.entry('index', './index');
 
   config.output.path(distDir);
-  config.output.publicPath('/app/');
+  config.output.publicPath('/');
   config.output.filename('[name].js');
 }
 

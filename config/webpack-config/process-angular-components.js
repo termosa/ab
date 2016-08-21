@@ -3,7 +3,7 @@ function processAngularComponents(config) {
 
   addLoader({
     test: /\/src\/components\/.*\.html$/,
-    loader: 'ng-cache?exportId&prefix=src:/app/components/**'
+    loader: 'ng-cache?exportId&prefix=src:/components/**'
   });
 
   // It's required only for obfuscated code. But it's included to

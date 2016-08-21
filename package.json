@@ -19,6 +19,9 @@
   },
   "devDependencies": {
     "bower": "1",
+    "extract-loader": "0.0",
+    "file-loader": "0.9",
+    "html-loader": "0.4",
     "ng-annotate-loader": "0.1",
     "ng-cache-loader": "0.0",
     "webpack": "1.13",
