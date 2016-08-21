@@ -8,6 +8,7 @@ var setupDevServer = require('./setup-dev-server');
 var skipProcessingVendors = require('./skip-processing-vendors');
 var processHtmlDocuments = require('./process-html-documents');
 var processStyles = require('./process-styles');
+var processImages = require('./process-images');
 
 var ROOT_DIR = path.resolve('./');
 var PUBLIC_DIR = ROOT_DIR;
@@ -21,5 +22,6 @@ setupDevServer(config, PUBLIC_DIR);
 skipProcessingVendors(config, ROOT_DIR);
 processHtmlDocuments(config);
 processStyles(config);
+processImages(config);
 
 module.exports = config.setup();

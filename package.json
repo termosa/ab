@@ -26,6 +26,7 @@
     "ng-annotate-loader": "0.1",
     "ng-cache-loader": "0.0",
     "style-loader": "0.13",
+    "url-loader": "0.5",
     "webpack": "1.13",
     "webpack-dashboard": "0.1",
     "webpack-dev-server": "1.14",
