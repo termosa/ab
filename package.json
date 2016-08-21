@@ -4,8 +4,8 @@
   "description": "AngularJS boilerplate",
   "scripts": {
     "build": "npm run build:prod",
-    "build:dev": "webpack --config ./config/webpack-dev.config.js",
-    "build:prod": "webpack --config ./config/webpack-prod.config.js",
+    "build:dev": "webpack --profile --config ./config/webpack-dev.config.js",
+    "build:prod": "webpack --profile --config ./config/webpack-prod.config.js",
     "postinstall": "npm run build:prod",
     "start": "npm run start:dev",
     "start:dev": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-dev.config.js",
