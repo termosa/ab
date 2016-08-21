@@ -9,7 +9,7 @@
     "postinstall": "npm run build:prod",
     "start": "npm run start:dev",
     "start:dev": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-dev.config.js",
-    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --config ./config/webpack-prod.config.js"
+    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-prod.config.js"
   },
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com>",
   "license": "ISC",

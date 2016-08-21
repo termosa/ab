@@ -1,7 +1,7 @@
 var angular = require('angular');
 
 module.exports = function supportComponentByAngularRoute(angularModule) {
-  angularModule.config(function($routeProvider) {
+  angularModule.config(['$routeProvider', function($routeProvider) {
     var when = $routeProvider.when;
 
     $routeProvider.when = function(path, route) {
@@ -19,5 +19,5 @@ module.exports = function supportComponentByAngularRoute(angularModule) {
 
       return when.call(this, path, newRoute);
     };
-  });
+  }]);
 };
