@@ -10,7 +10,7 @@ function processFonts(config) {
     include: /\/(node|bower)_modules\//,
     loader: 'file?' + [
       'regExp=(node|bower)_modules/(.*)',
-      'name=fontfaces/[2].[ext]'
+      'name=fontfaces/[2]'
     ].join('&')
   })
   return config;
