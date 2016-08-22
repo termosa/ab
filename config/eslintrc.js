@@ -35,6 +35,7 @@ module.exports = exports = {
     "no-confusing-arrow": [ ERR, {
       "allowParens": false
     }],
+    "no-console": WRN,
     "no-const-assign": ERR,
     "no-constant-condition": WRN,
     "no-delete-var": ERR,

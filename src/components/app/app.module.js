@@ -24,6 +24,17 @@ instance.config(function($routeProvider, $locationProvider) {
   });
 });
 
+instance.run(function($rootScope) {
+  $rootScope.$on('$routeChangeError', function(event, current, previous, rejection) {
+    console.error('[$routeChangeError] Rejection:', rejection);
+    console.error('[$routeChangeError] Details:', {
+      event: event,
+      current: current,
+      previous: previous
+    });
+  });
+});
+
 instance.run(function($log) {
   if (IS_DEV) { $log.log('App is running'); }
 });
