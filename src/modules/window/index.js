@@ -1,1 +1,3 @@
-module.exports = function() { return this; }();
+'use strict';
+
+module.exports = window;

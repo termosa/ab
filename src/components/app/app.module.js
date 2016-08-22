@@ -1,6 +1,8 @@
+'use strict';
+
 var angular = require('angular');
 var router = require('angular-route');
-var pages = require('./app.pages')
+var pages = require('./app.pages');
 var supportComponents = require('angular-route-component-support');
 
 var id = 'app';

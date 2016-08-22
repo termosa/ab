@@ -9,9 +9,7 @@ console.log('Build launched in PRODUCTION mode');
 
 config.entry('index', './index-prod');
 
-// It extracts styles while inlining for the development version
 extractStyles(config);
-
 setProdEnvironment(config);
 jsMinification(config);
 

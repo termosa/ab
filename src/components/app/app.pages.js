@@ -1,3 +1,5 @@
+'use strict';
+
 var landingPage = require('landing-page');
 
 module.exports = [

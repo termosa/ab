@@ -1,10 +1,13 @@
+'use strict';
+
 var angular = require('angular');
 var landingPageModule = require('./landing-page.module');
+var landingPageTemplateUrl = require('./landing-page.template');
 
 var id = 'landingPage';
 angular.module(landingPageModule)
 .component(id, {
-  templateUrl: require('./landing-page.template'),
+  templateUrl: landingPageTemplateUrl,
   controller: function() {
     this.name = 'World';
   }
