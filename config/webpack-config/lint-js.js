@@ -6,6 +6,7 @@ function lintJs(config) {
     loader: 'eslint'
   });
   config.set('eslint', {
+    configFile: 'config/eslintrc.js',
     failOnWarning: false,
     failOnError: true
   });
