@@ -134,7 +134,7 @@ module.exports = exports = {
     "linebreak-style": OFF, // git fixes this for us on checkin
     "lines-around-comment": OFF,
     "max-depth": [ WRN, 4 ],
-    "max-len": [ WRN, 127 ],
+    "max-len": [ WRN, 127 ], // width of github code viewer
     "max-nested-callbacks": [ WRN, 2 ],
     "max-params": [ WRN, 8 ],
     "new-cap": WRN,
