@@ -6,6 +6,8 @@ Thanks for taking a time to contribute!
 
 ### Files structure
 
+ * **/node_modules** — installed npm packages
+ * **/bower_modules** — installed bower packages (changed from `bower_components` for consistency with `node_modules` directory)
  * **/index.html** — entry file for browsing the application
  * **/app** — destination folder for builded files
  * **/src** — code of the application
@@ -21,5 +23,5 @@ Thanks for taking a time to contribute!
 Each Angular component should follow rules listed below
 
  * Angular `module` should return a string containing an **id** (name) of the module
- * All kind of Angular `services`, `components`, `directives`, `controllers` and `filters` should return an object with its **id** (name) and the containing **module** id
+ * All kind of Angular `services`, `components`, `directives`, `controllers` and `filters` should return an object with its **id** (name) and the **module** id
 

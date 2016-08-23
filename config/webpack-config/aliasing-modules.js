@@ -6,9 +6,7 @@ var modulesRoots = [ // order matters for resolving
   { alias: 'vendor', path: './src/vendors' },
   { alias: 'static', path: './src/statics' },
   { alias: 'bower', path: './bower_modules' },
-  { alias: 'node', path: './node_modules' },
-  { alias: 'style', path: './src/styles' },
-  { alias: 'resource', path: './src/resources' }
+  { alias: 'node', path: './node_modules' }
 ];
 
 function aliasingModules(config, rootDir) {
