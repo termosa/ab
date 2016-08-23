@@ -10,6 +10,7 @@ var processHtmlDocuments = require('./process-html-documents');
 var processStyles = require('./process-styles');
 var processFonts = require('./process-fonts');
 var processImages = require('./process-images');
+var processEntryHtml = require('./process-entry-html');
 
 var config = webpackManager();
 
@@ -30,5 +31,6 @@ processHtmlDocuments(config);
 processStyles(config);
 processFonts(config);
 processImages(config);
+processEntryHtml(config);
 
 module.exports = config.setup();
