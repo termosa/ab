@@ -9,7 +9,7 @@ function processAngularComponents(config) {
     loader: 'ng-cache?' + [
       'exportIdOnly',
       'prefix=src:/components/**',
-      'minimizeOptions=' + JSON.stringify(htmlMinifierOptions)
+      '-minimize'
     ].join('&')
   });
 
