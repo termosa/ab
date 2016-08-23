@@ -24,10 +24,10 @@ instance.config(function($routeProvider, $locationProvider) {
   });
 });
 
-instance.run(function($rootScope) {
+instance.run(function($rootScope, $log) {
   $rootScope.$on('$routeChangeError', function(event, current, previous, rejection) {
-    console.error('[$routeChangeError] Rejection:', rejection);
-    console.error('[$routeChangeError] Details:', {
+    $log.error('[$routeChangeError] Rejection:', rejection);
+    $log.error('[$routeChangeError] Details:', {
       event: event,
       current: current,
       previous: previous
