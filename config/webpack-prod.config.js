@@ -5,6 +5,7 @@ var jsMinification = require('./webpack-config/js-minification');
 var setProdEnvironment = require('./webpack-config/set-prod-environment');
 var extractStyles = require('./webpack-config/extract-styles');
 var htmlMinification = require('./webpack-config/html-minification');
+var cssMinification = require('./webpack-config/css-minification');
 
 console.log('Build launched in PRODUCTION mode');
 
@@ -16,5 +17,6 @@ extractStyles(config);
 setProdEnvironment(config);
 jsMinification(config);
 htmlMinification(config);
+cssMinification(config);
 
 module.exports = config.setup();
