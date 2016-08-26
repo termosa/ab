@@ -6,10 +6,11 @@
     "build": "npm run build:prod",
     "build:dev": "webpack --profile --config ./config/webpack-dev.config.js",
     "build:prod": "webpack --profile --config ./config/webpack-prod.config.js",
-    "postinstall": "npm run build:prod",
+    "postinstall": "npm test && npm run build:prod",
     "start": "npm run start:dev",
     "start:dev": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-dev.config.js",
-    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-prod.config.js"
+    "start:prod": "WDS_DASHBOARD=1 webpack-dashboard -- webpack-dev-server --inline --hot --config ./config/webpack-prod.config.js",
+    "test": "nsp check --output=summary"
   },
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com>",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "htmlhint-loader": "0.1",
     "ng-annotate-loader": "0.1",
     "ng-cache-loader": "~0.0.20",
+    "nsp": "^2.6.1",
     "open-sans-fontface": "1.4",
     "style-loader": "0.13",
     "url-loader": "0.5",
