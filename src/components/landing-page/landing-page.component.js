@@ -4,18 +4,18 @@ var angular = require('angular');
 var landingPageModule = require('./landing-page.module');
 var landingPageTemplateUrl = require('./landing-page.template');
 
-var mockBackendModule = require('mock-backend');
+var backendlessModule = require('backendless-angular');
 var mockConfig = require('./spec/message.mock');
 
-angular.module(mockBackendModule)
-.config(function(mockBackendProvider) {
+angular.module(backendlessModule)
+.config(function(backendlessProvider) {
   angular.forEach(mockConfig(), function(mock) {
-    mockBackendProvider.when(mock);
+    backendlessProvider.when(mock);
   });
 });
 
 var id = 'landingPage';
-angular.module(landingPageModule, [ mockBackendModule ])
+angular.module(landingPageModule, [ backendlessModule ])
 .component(id, {
   templateUrl: landingPageTemplateUrl,
   controller: function($http) {

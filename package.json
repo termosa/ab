@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "1.5",
-    "angular-route": "1.5"
+    "angular-route": "1.5",
+    "backendless-angular": "^1.0.0"
   },
   "devDependencies": {
     "angular-mock-backend": "^1.2.0",
