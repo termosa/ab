@@ -77,7 +77,7 @@ module.exports = exports = {
     "no-script-url": ERR,
     "no-self-compare": ERR,
     "no-shadow-restricted-names": ERR,
-    "no-shadow": WRN,
+    "no-shadow": OFF,
     "no-this-before-super": WRN,
     "no-throw-literal": ERR,
     "no-undef-init": OFF,

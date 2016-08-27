@@ -8,7 +8,7 @@ function lintJs(config) {
   config.set('eslint', {
     configFile: 'config/eslintrc.js',
     failOnWarning: false,
-    failOnError: true
+    failOnError: false
   });
 }
 
