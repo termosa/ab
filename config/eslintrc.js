@@ -24,7 +24,7 @@ module.exports = exports = {
     "dot-location": [ WRN, "property" ],
     "dot-notation": WRN,
     "eqeqeq": [ ERR, "smart" ],
-    "global-require": ERR,
+    "global-require": OFF,
     "guard-for-in": WRN,
     "init-declarations": OFF,
     "no-alert": ERR,
@@ -54,7 +54,7 @@ module.exports = exports = {
       "string": false
     }],
     "no-implied-eval": ERR,
-    "no-invalid-this": ERR,
+    "no-invalid-this": OFF,
     "no-iterator": ERR,
     "no-label-var": ERR,
     "no-labels": WRN,
